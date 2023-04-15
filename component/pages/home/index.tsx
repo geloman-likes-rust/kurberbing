@@ -1,0 +1,46 @@
+import style from "./style.module.css"
+import { Roboto } from "next/font/google"
+
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: "900",
+})
+
+type Menu = {
+  id: number
+  image: string
+  category: string
+  param: string
+}[]
+
+type Props = {
+  menu: Menu
+}
+
+export default function Home({menu}: Props) {
+  return (
+    <div className={`${style.home} ${roboto.className}`}>
+      <ul className={style.grid}>
+        {
+          menu.map((item) => {
+            return (
+              <li key={item.param}>
+                <a href={item.param}>
+                  <div className={style.card}>
+                    <div className={style.image}>
+                      <img src={item.image} alt={item.category} />
+                    </div>
+                    <div className={style.category}>
+                      <p>{item.category}</p>
+                    </div>
+                    <div className={style.select}>select</div>
+                  </div>
+                </a>
+              </li>
+            )
+          })
+        }
+      </ul>
+    </div>
+  )
+}

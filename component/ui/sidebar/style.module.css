@@ -1,0 +1,18 @@
+.sidebar {
+  list-style: none;
+  width: 300px;
+}
+
+.item a {
+  text-decoration: none;
+  color: black;
+}
+
+.item a div {
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.image {
+  display: none;
+}

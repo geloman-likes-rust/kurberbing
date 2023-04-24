@@ -1,0 +1,115 @@
+.page {
+  padding: 20px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 1400px;
+  margin-inline: auto;
+}
+
+.sidebar {
+  align-self: start;
+  flex-shrink: 0;
+  top: 20px;
+  position: sticky;
+  outline: 1px solid black;
+}
+
+.grid {
+  display: grid;
+  padding-inline: 20px;
+  align-self: start;
+  grid-template-columns: repeat(3, 1fr);
+  width: 1000px;
+  list-style: none;
+  gap: 20px;
+}
+
+.image {
+  height: 160px;
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.image img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+  rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  background: #fff;
+  overflow: hidden;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+
+.details {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+  font-size: 18px;
+  color: #CC704B;
+  font-weight: bold;
+}
+
+.details .label {
+  padding: 20px;
+}
+
+.details .price {
+  padding: 10px 20px;
+  text-align: end;
+}
+
+.order_now {
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
+  color: #EEEEEE;
+  background: #CC704B;
+  padding-block: 20px;
+}
+
+@media (max-width: 1150px) {
+  .image {
+    height: 130px;
+  }
+  .details {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .grid {
+    gap: 15px;
+  }
+  .image {
+    height: 100px;
+  }
+  .details {
+    font-size: 14px;
+  }
+  .details .label {
+    padding: 15px;
+  }
+  .order_now {
+    padding-block: 15px;
+  }
+}
+
+@media (max-width: 840px) {
+  .details {
+    font-size: 12px;
+  }
+}

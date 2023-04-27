@@ -19,7 +19,7 @@ export default function Homepage({menu}: Props) {
       <Head>
         <title>kurberbing</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/burger.svg" />
       </Head>
       <Home menu={menu} />
     </>

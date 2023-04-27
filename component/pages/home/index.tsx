@@ -6,15 +6,13 @@ const roboto = Roboto({
   weight: "900",
 })
 
-type Menu = {
-  id: number
-  image: string
-  category: string
-  param: string
-}[]
-
 type Props = {
-  menu: Menu
+  menu: {
+    id: number
+    image: string
+    category: string
+    param: string
+  }[]
 }
 
 export default function Home({menu}: Props) {
